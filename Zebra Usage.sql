@@ -14,7 +14,7 @@ Select * From v_zebraDbus Limit 10
 
 
 Select sfdcAccountName, cloudType, listPrice, Sum(deltaDbus), sum(nonDeltaDbus), sum(dbus), sum(dbus*listPrice) as dollarDbus
-From v_ZebraDbus
+From v_zebraDbus
 --Where monthName = "JUNE"
 Where datediff(now(),date)<30
 Group by sfdcAccountName, cloudType, listPrice
